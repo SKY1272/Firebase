@@ -1,14 +1,16 @@
 import React, { useState } from 'react';
 import { FaEye, FaEyeSlash } from 'react-icons/fa';
-
+import './login.css'
+import {Link} from 'react-router-dom'
+import {useNavigate} from 'react-router-dom'
 function Login() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [showPassword, setShowPassword] = useState(false);
-
+  const navigate = useNavigate();
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(email, password);
+    navigate('ExpenseTracer')
   };
 
   const togglePasswordVisibility = () => {
@@ -42,11 +44,12 @@ function Login() {
           </button>
         
         <br/>
-        <button>Login</button>
+        <button className='btn'>Login</button>
         <br/>
-        <span>Forgot Password</span>
+       
       </form>
-      <p>Don't have an account? <span>Sign up?</span></p>
+      <span>Forgot Password</span>
+      <Link to="/signup">Don't have an account? Signup</Link>
     </div>
   );
 }
