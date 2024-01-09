@@ -1,0 +1,31 @@
+/* ExpenseItem.module.css */
+
+li {
+  list-style: none;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+li div {
+  flex: 1;
+}
+
+li button {
+  padding: 8px 12px;
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+li button:hover {
+  background-color: #c82333;
+}
+
+
